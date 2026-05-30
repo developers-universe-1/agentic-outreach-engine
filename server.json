@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "mcp-outreach-engine",
+  "version": "1.0.0",
+  "description": "MCP-native multi-channel outreach server. Expose sequence orchestration, reply classification, auto-tuning, and channel performance as typed MCP tools.",
+  "homepage": "https://github.com/developers-universe-1/agentic-outreach-engine",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/developers-universe-1/agentic-outreach-engine.git"
+  },
+  "license": "MIT",
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "ts-node", "src/mcp/server.ts"]
+  },
+  "tools": [
+    {
+      "name": "create_sequence",
+      "description": "Create a multi-step sequence across Email, LinkedIn, and Cold Call with A/B testing."
+    },
+    {
+      "name": "classify_reply",
+      "description": "AI reads every reply and classifies intent: Positive, Neutral, Objection, Unsubscribe, or Meeting Booked."
+    },
+    {
+      "name": "get_tuning_recommendations",
+      "description": "Get weekly AI recommendations for sequence optimization with projected impact."
+    },
+    {
+      "name": "get_channel_performance",
+      "description": "Get open rate, reply rate, meeting rate by channel (Email/LinkedIn/Cold Call)."
+    },
+    {
+      "name": "get_lead_status",
+      "description": "Get current sequence step, last touch, reply status, next scheduled action for a lead."
+    }
+  ]
+}

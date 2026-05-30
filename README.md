@@ -11,6 +11,36 @@ An MCP-native multi-channel outreach server. Expose sequence orchestration, repl
 
 **Demo mode works without API keys.** Clone, `npm install`, `npm run dev`, and explore the full dashboard instantly.
 
+## One-Line Install
+
+**Claude Desktop** — paste into `claude_desktop_config.json`:
+```json
+{
+  "mcpServers": {
+    "outreach": {
+      "command": "npx",
+      "args": ["-y", "ts-node", "src/mcp/server.ts"]
+    }
+  }
+}
+```
+
+**Claude Code**:
+```bash
+claude mcp add outreach -- npx -y ts-node src/mcp/server.ts
+```
+
+**Cursor** — add to `.cursor/mcp.json`:
+```json
+{
+  "mcpServers": [{
+    "name": "outreach",
+    "command": "npx",
+    "args": ["-y", "ts-node", "src/mcp/server.ts"]
+  }]
+}
+```
+
 ## Why MCP for Outreach?
 
 Outreach stacks are fragmented: Outreach.io for email, LinkedIn for social, Salesloft for calls, Apollo for enrichment. Every SDR ends up context-switching between 4 tabs to run one sequence. The Model Context Protocol (MCP) provides a standard way to expose these as **tools** that any AI agent can discover and invoke. This project is a reference implementation — an outreach-specific MCP server with a visual trace panel so you can see every tool call the agent makes.
