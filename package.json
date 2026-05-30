@@ -1,7 +1,28 @@
 {
-  "name": "agentic-outreach-engine",
+  "name": "mcp-outreach-engine",
   "version": "1.0.0",
-  "private": true,
+  "description": "MCP-native multi-channel outreach server. Expose sequence orchestration, reply classification, auto-tuning, and channel performance as typed MCP tools.",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "outreach",
+    "sequences",
+    "email",
+    "linkedin",
+    "cold-call",
+    "reply-classification",
+    "nextjs",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/developers-universe-1/agentic-outreach-engine.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
