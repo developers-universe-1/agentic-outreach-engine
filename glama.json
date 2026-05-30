@@ -1,0 +1,11 @@
+{
+  "name": "mcp-outreach-engine",
+  "description": "MCP-native multi-channel outreach with sequence orchestration, reply classification, and auto-tuning.",
+  "repository": "https://github.com/developers-universe-1/agentic-outreach-engine",
+  "license": "MIT",
+  "install": {
+    "claude": "claude mcp add mcp-outreach-engine npx -y ts-node src/mcp/server.ts",
+    "cursor": "Add to Cursor MCP settings: command: npx -y ts-node src/mcp/server.ts",
+    "generic": "npx -y ts-node src/mcp/server.ts"
+  }
+}
