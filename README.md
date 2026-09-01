@@ -11,6 +11,15 @@ An MCP-native multi-channel outreach server. Expose sequence orchestration, repl
 
 **Demo mode works without API keys.** Clone, `npm install`, `npm run dev`, and explore the full dashboard instantly.
 
+## What this demonstrates
+
+Engineering signals relevant to forward-deployed / customer-facing AI work:
+
+- **Typed MCP tool design** — sequence orchestration, reply classification, tuning, and channel performance exposed as discoverable MCP tools with Zod-validated input/output schemas (`src/mcp/server.ts`).
+- **Agentic LLM pipeline design** — an orchestrator (`src/lib/agent/orchestrator.ts`) that turns natural-language asks into tool calls, with intent classification returning confidence scores and suggested responses.
+- **Production data modeling** — typed domain models for campaigns, multi-step sequences, ICP-scored leads, and classified replies, with step-level performance tracking across Email, LinkedIn, and Cold Call.
+- **Observability for agent behavior** — a dashboard with a tool-call trace panel so every agent action is inspectable, plus Jest coverage over snapshot generation, tuning recommendations, and reply distribution.
+
 ## One-Line Install
 
 **Claude Desktop** — paste into `claude_desktop_config.json`:
@@ -195,3 +204,10 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for how to add tools, run tests, and su
 ## License
 
 MIT
+
+## Related
+
+- [developers-universe-1](https://github.com/developers-universe-1) — Forward Deployed Engineer profile: case studies, post-mortems, production AI evals
+- [agentic-revenue-intelligence](https://github.com/developers-universe-1/agentic-revenue-intelligence)
+- [agentic-sales-engine](https://github.com/developers-universe-1/agentic-sales-engine)
+- [agentic-demand-engine](https://github.com/developers-universe-1/agentic-demand-engine)
